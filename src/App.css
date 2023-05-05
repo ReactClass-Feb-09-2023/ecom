@@ -1,0 +1,17 @@
+:root, button {
+	font-family: system-ui, -apple-system;
+}
+
+:root, ul, button, p {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.app {
+	outline: 1px solid red;
+	max-width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}

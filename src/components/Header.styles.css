@@ -1,0 +1,14 @@
+.header__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.header__list > li {
+	list-style-type: none;
+}
+
+.header__list > li > a {
+	text-decoration: none;
+}
