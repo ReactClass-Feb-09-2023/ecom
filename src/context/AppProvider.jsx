@@ -7,7 +7,10 @@ import useFetch from '../hooks/useFetch'
 function AppProvider({ children }) {
   const [products, setProducts] = useState([])
   const [filter, setFilter] = useState('')
+  const [cartList, setCartList] = useState([])
+
   const { data, error, loading } = useFetch(PRODUCTS_API_URL)
+
   const {
     data: categoriesData,
     error: categoriesError,
@@ -37,7 +40,9 @@ function AppProvider({ children }) {
     categoriesError,
     categoriesLoading,
     filter,
-    setFilter
+    setFilter,
+    cartList,
+    setCartList
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>

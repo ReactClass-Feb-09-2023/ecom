@@ -1,0 +1,25 @@
+.cart__subtotal__wrapper{
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--lg-font-size);
+	margin-top: var(--lg-spacer);
+}
+
+.cart__checkout__link{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid var(--warning-color);
+	padding: var(--sm-spacer);
+	background-color: var(--warning-color);
+	font-size: var(--lg-font-size);
+	color: white;
+	margin-top: var(--lg-spacer);
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50%;
+}
+
+.cart__checkout__link:active{
+	transform:scale(.9)
+}

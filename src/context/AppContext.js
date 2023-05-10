@@ -10,7 +10,9 @@ const initialState = {
   categoriesError: null,
   categoriesLoading: false,
   filter: '',
-  setFilter: () => {}
+  setFilter: () => {},
+  cartList: [],
+  setCartList: () => {}
 }
 
 const AppContext = createContext(initialState)

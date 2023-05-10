@@ -12,6 +12,7 @@
 	/* colors */
 	--danger-color: red;
 	--warning-color: orange;
+	--secondary-color: lightgrey;
 	
 	font-family: system-ui, -apple-system;
 }
@@ -30,3 +31,6 @@
 }
 
 
+*{
+	/* outline: 1px solid red; */
+}

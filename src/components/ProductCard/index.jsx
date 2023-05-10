@@ -1,9 +1,24 @@
+/* eslint-disable react/prop-types */
 import './ProductCard.styles.css'
 
+import AppContext from '../../context/AppContext'
 import { CURRENCY_SIGN } from '../../utils'
+import { useContext } from 'react'
 
 function ProductCard({ product }) {
   const priceSegments = product.price.toString().split('.')
+  const { cartList, setCartList } = useContext(AppContext)
+  const isProductInCartList = !!cartList.filter(item => item.id === product.id)
+    .length
+
+  const updateCart = () => {
+    if (isProductInCartList) {
+      setCartList(prevState => prevState.filter(item => item.id !== product.id))
+      return
+    }
+    setCartList(prevState => [...prevState, product])
+  }
+
   return (
     <div className="product__card__container">
       <img
@@ -22,7 +37,15 @@ function ProductCard({ product }) {
         </span>
       </p>
       <p className="product__card__rating">Rating: {product.rating.rate}</p>
-      <button className="product__card__add__to__cart">Add to Cart</button>
+      <button
+        className="product__card__add__to__cart"
+        onClick={updateCart}
+        style={{
+          background: isProductInCartList ? 'orange' : undefined
+        }}
+      >
+        {isProductInCartList ? 'Remove frm Cart' : 'Add to Cart'}
+      </button>
     </div>
   )
 }

@@ -60,4 +60,5 @@ margin-top: var(--md-spacer);
 
 .product__card__add__to__cart:hover{
   background-color: lightsalmon;
+  cursor: pointer;
 }

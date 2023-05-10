@@ -1,0 +1,33 @@
+.cart__header__container{
+	display: flex;
+	gap: var(--md-spacer);
+	padding: calc(var(--md-spacer) * 2);
+	justify-content: center;
+	align-items: center;
+	border-bottom: 2px solid var(--secondary-color);
+}
+
+.cart__header__label{
+	font-size: var(--lg-font-size);
+	font-weight: bold;
+}
+
+.cart__header__container .material-symbols-outlined{
+	width: 35px;
+}
+
+.cart__header__icon{
+	position: relative;
+}
+
+.cart__header__pill{
+	background-color: var(--warning-color);
+	font-weight: bold;
+	border-radius: 50%;
+	text-align: center;
+	width: 2ch;
+	height: 2ch;
+	position: absolute;
+	bottom: -1ch;
+	right: -1ch;
+}
