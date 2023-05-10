@@ -1,0 +1,10 @@
+.product__cards__list__grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--lg-spacer);
+	justify-content: center;
+}
+
+.product__cards__list__grid > li {
+	list-style-type: none;
+}

@@ -1,0 +1,33 @@
+.products__filter__container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sm-spacer);
+}
+
+.products__filter__container > div {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+input[type="radio"] + label::first-letter{
+	text-transform:capitalize;
+}
+
+.products__filter__category__error{
+	color: var(--danger-color);
+	font-style: italic;
+}
+
+.products__filter__reset{
+	background-color: transparent;
+	border: none;
+	color: var(--warning-color);
+	font-style: italic;
+	margin-top: var(--sm-spacer);
+	cursor: pointer;
+}
+
+.products__filter__reset:hover{
+	text-decoration: underline;
+}

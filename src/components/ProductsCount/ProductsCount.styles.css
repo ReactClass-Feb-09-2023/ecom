@@ -1,0 +1,11 @@
+.productsCount__container{
+	display: flex;
+	gap: var(--sm-spacer);
+	margin-bottom: var(--md-spacer);
+	border-bottom: 1px solid rgba(128, 128, 128, 0.186);
+	padding-bottom: var(--sm-spacer);
+}
+
+.productsCount__container > p:first-child{
+	min-width: 2ch;
+}

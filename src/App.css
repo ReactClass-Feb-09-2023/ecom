@@ -1,8 +1,22 @@
-:root, button {
+:root {
+	/* font-size */
+	--sm-font-size: .5rem;
+	--md-font-size : .75rem;
+	--lg-font-size: 1.5rem;
+
+	/* spacers */
+	--sm-spacer: .5rem;
+	--md-spacer: 1rem;
+	--lg-spacer: 1.5rem;
+
+	/* colors */
+	--danger-color: red;
+	--warning-color: orange;
+	
 	font-family: system-ui, -apple-system;
 }
 
-:root, ul, button, p {
+:root, ul, button, p, h4 {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -10,8 +24,9 @@
 
 
 .app {
-	outline: 1px solid red;
 	max-width: 80%;
 	margin-right: auto;
 	margin-left: auto;
 }
+
+

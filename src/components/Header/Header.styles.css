@@ -2,7 +2,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: var(--md-spacer);
+	padding-bottom: var(--md-spacer);
+	border-bottom: 1px solid lightgray;
 }
 
 .header__list > li {

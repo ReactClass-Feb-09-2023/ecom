@@ -1,7 +1,12 @@
-import React from 'react'
-
+import ProductCardsList from '../components/ProductCardsList'
+import ProductsFilter from '../components/ProductsFilter'
 function Products() {
-  return <div>Products</div>
+  return (
+    <div className="pages__products">
+      <ProductsFilter />
+      <ProductCardsList />
+    </div>
+  )
 }
 
 export default Products
