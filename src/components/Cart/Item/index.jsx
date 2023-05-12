@@ -6,15 +6,31 @@ import React, { useContext, useState } from 'react'
 import AppContext from '../../../context/AppContext'
 
 function CartItem({ item }) {
-  const [qty, setQty] = useState(1)
-  const { id, title, price, image: src, rating } = item
-  const { setCartList } = useContext(AppContext)
+  const { id, title, price, image: src, qty, rating } = item
+  const { cartList, setCartList } = useContext(AppContext)
+
+  const handleQtyIncrement = () => {
+    const index = cartList.findIndex(prod => prod.id === id)
+    if (index !== -1) {
+      const productCopy = { ...cartList[index], qty: ++cartList[index].qty }
+      const cartListCopy = [...cartList]
+      cartListCopy[index] = productCopy
+      setCartList(cartListCopy)
+    }
+  }
 
   const handleQtyDecrement = () => {
     if (qty === 1) {
       setCartList(prevState => prevState.filter(_item => _item.id !== id))
+      return
     }
-    setQty(prevState => prevState - 1)
+    const index = cartList.findIndex(prod => prod.id === id)
+    if (index !== -1) {
+      const productCopy = { ...cartList[index], qty: --cartList[index].qty }
+      const cartListCopy = [...cartList]
+      cartListCopy[index] = productCopy
+      setCartList(cartListCopy)
+    }
   }
 
   const handleRemoveItem = () => {
@@ -38,9 +54,7 @@ function CartItem({ item }) {
           <p>$ {price}</p>
           <div className="cart__item__buttons_group">
             <button onClick={handleQtyDecrement}>-</button>
-            <button onClick={() => setQty(prevState => prevState + 1)}>
-              +
-            </button>
+            <button onClick={handleQtyIncrement}>+</button>
           </div>
         </div>
       </div>

@@ -12,7 +12,9 @@ const initialState = {
   filter: '',
   setFilter: () => {},
   cartList: [],
-  setCartList: () => {}
+  setCartList: () => {},
+  province: 'ON',
+  setProvince: () => {}
 }
 
 const AppContext = createContext(initialState)

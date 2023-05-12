@@ -7,7 +7,6 @@ import CartItem from '../Item'
 
 function CartList() {
   const { cartList } = useContext(AppContext)
-  console.log(cartList)
   return (
     <div className="cart__list__container">
       {cartList.map(item => (

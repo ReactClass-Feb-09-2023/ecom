@@ -8,7 +8,7 @@ function AppProvider({ children }) {
   const [products, setProducts] = useState([])
   const [filter, setFilter] = useState('')
   const [cartList, setCartList] = useState([])
-
+  const [province, setProvince] = useState('ON')
   const { data, error, loading } = useFetch(PRODUCTS_API_URL)
 
   const {
@@ -42,7 +42,9 @@ function AppProvider({ children }) {
     filter,
     setFilter,
     cartList,
-    setCartList
+    setCartList,
+    province,
+    setProvince
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>

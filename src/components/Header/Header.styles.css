@@ -2,9 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
-	margin-bottom: var(--md-spacer);
-	padding-bottom: var(--md-spacer);
-	border-bottom: 1px solid lightgray;
+
 }
 
 .header__list > li {
@@ -13,4 +11,16 @@
 
 .header__list > li > a {
 	text-decoration: none;
+}
+
+.header__province{
+	height: min-content;
+}
+
+.header__container{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid lightgray;
+	margin-bottom: var(--md-spacer);
+	padding-bottom: var(--md-spacer);
 }

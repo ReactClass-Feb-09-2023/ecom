@@ -16,6 +16,8 @@ function ProductCard({ product }) {
       setCartList(prevState => prevState.filter(item => item.id !== product.id))
       return
     }
+    // introduce the qty property to the product object
+    product.qty = 1
     setCartList(prevState => [...prevState, product])
   }
 
